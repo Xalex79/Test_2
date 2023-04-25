@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); /* Fuente global */
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none; /* Sin subrayado */
+    color: inherit; /* Color del padding */
+
+}
+
+:root { /* Seudo elemento html */
+    --main-bg-color: #eef; /* Las variables empiezan con dos guiones */
+    --main-fg-color: #5f6c7b; /* En este caso usamos una variable para cambiar todos los colores en una línea de código */
+    --contrast-bg-color: #90b4ce;
+    --contrast-fg-color: #894067;
+    --accent-bg-color: #fc3d93;
+    --accent-fg-color: #fffffe;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Roboto, sans-serif; /* Si por lo que sea no está disponible Roboto, se usará sans-serif */
+    background-color: var(--main-bg-color); /* Usamos la variable para añadir color */
+    color: var(--main-fg-color);
+}
+
+section:nth-child(even) {
+    background-color: color-mix(in srgb, var(--main-fg-color) 10%, var(--main-bg-color));
+}
+
+section {
+    height: 100vh;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
+}
+
+section p {
+    text-align: justify;
+}

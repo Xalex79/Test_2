@@ -1,0 +1,40 @@
+#main-menu {
+    --bg-color: var(--contrast-bg-color);
+    --txt-color: var(--contrast-fg-color);
+    --hover-bg: var(--accent-bg-color);
+    --hover-txt: var(--accent-fg-color);
+    --menu-height: 3rem;
+}
+
+#main-menu {
+    background-color: var(--bg-color);
+    color: var(--txt-color);
+    height: var(--menu-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5em;
+    font-size: 150%;
+    position: fixed;
+    width: 100%;
+}
+
+#main-menu ul { /* Se aplica a cualquier elemento ul del menú*/
+
+}
+
+#main-menu.activo ul { /* Se aplica los elementos ul del menú cuando está con la clase activo (menú abierto)*/
+    background-color: var(--bg-color);
+}
+
+.hamburgesa {
+    width: 2em;
+    height: 2em;
+}
+
+.hamburgesa div {
+    background-color: var(--txt-color);
+    width: 2em;
+    height: .3em;
+    margin: .3em auto;
+}
